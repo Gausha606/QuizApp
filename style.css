@@ -1,12 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
 }
 
 html,body{
   height: 100%;
   width: 100%;
-  background: #085b88;
+  background: #06496d;
+  
 }
 
+.mainContainer{
+  background-color: white;
+  max-width: 500px;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding: 30px;
+  color: #085b88;
+
+}
+
+.mainContainer h2{
+  font-weight: 700;
+  border-bottom: #022b41 1px solid;
+  padding-bottom: 15px;
+}
+
+
+.queansContainer p{
+  margin: 1rem 0;
+}
+
+.queansContainer .btn{
+  width: 100%;
+  padding: 10px;
+  margin: 8px;
+  text-align: left;
+  border-radius: 4px;
+  border: #085b88 1px solid;
+  background-color: white;
+  color: #034569;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover:not([disabled]){
+  background-color: #034366;
+  color: white;
+}
+
+.nextBtn{
+  padding: 4px 40px;
+  background-color: #022b41;
+  color: white;
+  border-radius: 4px;
+  margin: 10px auto;
+  cursor: pointer;
+  display: block;
+}
+
+#correct{
+  background-color: rgb(255, 162, 162);
+}
+
+#incorrect{
+  background-color: rgb(183, 255, 173);
+}
