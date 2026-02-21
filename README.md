@@ -37,6 +37,16 @@ Project Folder mein jayein:
 cd QuizApp
 ```
 
+API Key Setup:
+config.js file mein apni API key enter karein:
+
+```JavaScript
+const CONFIG ={
+  API_KEY : "xyz example key"
+}
+export default CONFIG;
+```
+
 Run karein:
 `index.html` file ko browser mein open karein (Preferably using Live Server).
 
@@ -53,4 +63,6 @@ Run karein:
 
 ## 📸 Screenshots
 
-![Quiz-App](image.png)
+![Quiz-App](assets/image.png)
+![Quiz App question](assets/image-1.png)
+![Quiz App Final Score](assets/image-2.png)

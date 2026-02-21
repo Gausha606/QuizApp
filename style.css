@@ -1,41 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
 }
 
-html,body{
+html,
+body {
   height: 100%;
   width: 100%;
   background: #06496d;
-  
+
 }
 
-.mainContainer{
+.mainContainer {
   background-color: white;
-  max-width: 500px;
-  margin: 50px auto;
+  width: 500px;
+  margin: 20px auto;
   border-radius: 10px;
   padding: 30px;
   color: #085b88;
-
 }
 
-.mainContainer h2{
+.mainContainer .headerCountContainer{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.countQuestion{
+ padding-bottom: 15px;
+ display: none ;
+}
+.mainContainer h2 {
   font-weight: 700;
   border-bottom: #022b41 1px solid;
   padding-bottom: 15px;
 }
 
+.textPara {
+  margin-top: 14px;
+}
 
-.queansContainer p{
+.loadingText {
+    color: #085b88;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+.queansContainer {
+  display: none;
+}
+
+.queansContainer p {
   margin: 1rem 0;
 }
 
-.queansContainer .btn{
+.queansContainer .btn {
   width: 100%;
   padding: 10px;
   margin: 8px;
@@ -48,9 +72,31 @@ html,body{
   transition: all 0.2s ease-in-out;
 }
 
-.btn:hover:not([disabled]){
+.btn:hover:not([disabled]) {
   background-color: #034366;
   color: white;
+}
+
+.queansContainer .questionCountContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+  padding: 10px;
+}
+
+
+.queansContainer .explainBox{
+  padding: 30px;
+  background-color: rgb(183, 255, 173);
+  color: #085b88;
+  border-radius: 12px;
+  display: none;
+  border-left: 5px solid #28a745;
+}
+
+.nextBtn:disabled,.btn:disabled {
+  cursor: no-drop;
 }
 
 .nextBtn{
@@ -60,13 +106,56 @@ html,body{
   border-radius: 4px;
   margin: 10px auto;
   cursor: pointer;
-  display: block;
+  display: none;
 }
 
-#correct{
+.homeBtn {
+  padding: 4px 40px;
+  background-color: #022b41;
+  color: white;
+  border-radius: 4px;
+  margin: 0 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.generateBtn {
+  width: 100%;
+  padding: 4px 40px;
+  background-color: #022b41;
+  color: white;
+  border-radius: 4px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.queansContainer .btn.correct-btn {
+  background-color: rgb(183, 255, 173);
+}
+
+.queansContainer .btn.incorrect-btn {
   background-color: rgb(255, 162, 162);
 }
 
-#incorrect{
-  background-color: rgb(183, 255, 173);
+.ai-input-form .inputContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.topicInput,
+.numberInput {
+  width: 50%;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  margin-block: 14px;
+}
+
+
+
+@media screen and (max-width:500px) {
+  .mainContainer{
+    width: 300px;
+  }
 }

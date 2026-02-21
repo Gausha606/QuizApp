@@ -4,21 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" type="module"></script>
   </head>
   <body>
     <div class="mainContainer">
-      <h2>Simple Quiz</h2>
+      <div class="headerCountContainer">
+        <h2>Simple Quiz</h2>
+        <span class="countQuestion" style="display: none"></span>
+      </div>
+      <p class="textPara">Enter topic and number of practice questions.</p>
+
+      <form class="ai-input-form">
+        <div class="inputContainer">
+          <input type="text" class="topicInput" placeholder="Enter Topics" />
+          <input
+            type="number"
+            class="numberInput"
+            placeholder="Enter Number of questions"
+            min="1"
+            value="5"
+          />
+        </div>
+        <button class="generateBtn">Generative AI Quiz</button>
+      </form>
+      <p class="loadingText" style="display: none">AI is thinking... 🧠</p>
       <div class="queansContainer">
-        <p class="question">1. Which is the starting point of Web development ?</p>
-        <button class="btn">Answer1</button>
-        <button class="btn">Answer2</button>
-        <button class="btn">Answer3</button>
-        <button class="btn">Answer4</button>
+        <p class="question">
+          1. Which is the starting point of Web development ?
+        </p>
+
+        <div id="answer-buttons">
+          <button class="btn">Answer1</button>
+          <button class="btn">Answer2</button>
+          <button class="btn">Answer3</button>
+          <button class="btn">Answer4</button>
+        </div>
+        <div>
+          <p class="explainBox">explanation</p>
+        </div>
       </div>
 
       <button class="nextBtn">Next</button>
+      <button class="homeBtn" style="display: none;">Home</button>
     </div>
   </body>
 </html>
