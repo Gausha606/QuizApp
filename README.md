@@ -14,10 +14,10 @@ A simple Quiz app for exploring GS basic questions.
 
 ## 🛠️ Tech Stack
 
-| Technology     | Use Case                                            |
-| :------------- | :-------------------------------------------------- |
-| **HTML5**      | For structure and semantic layout.                  |
-| **CSS3**       | For interactive design and styling.                  |
+| Technology     | Use Case                            |
+| :------------- | :---------------------------------- |
+| **HTML5**      | For structure and semantic layout.  |
+| **CSS3**       | For interactive design and styling. |
 | **JavaScript** | For calculating and updating score. |
 
 
